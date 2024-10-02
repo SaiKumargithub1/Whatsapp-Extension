@@ -17,7 +17,7 @@ Setting Up Locally
 TO Clone this repository:
 bash
 
-- **git clone** https://github.com/yourusername/whatsapp-translator.git
+- **git clone**  https://github.com/SaiKumargithub1/Whatsapp-Extension.git
   ------Navigate into the project directory:
   bash
   ---cd whatsapp-translator
