@@ -50,26 +50,10 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #1eae56;
+  background-color: #1da853;
 }
 
 #status {
-  color: #25d366;
   text-align: center;
-  margin-top: 10px;
-}
-
-button.translate-button {
-  margin-left: 10px;
-  cursor: pointer;
-  padding: 2px 6px;
-  background-color: #25d366;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  font-size: 8px;
-}
-
-div {
-  margin-top: 10px;
+  color: green;
 }
