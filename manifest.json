@@ -26,5 +26,8 @@
       "run_at": "document_end"
     }
   ],
-  "host_permissions": ["*://api.mymemory.translated.net/*"]
+  "host_permissions": [
+    "*://web.whatsapp.com/*",
+    "*://api.mymemory.translated.net/*"
+  ]
 }
