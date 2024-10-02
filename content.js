@@ -34,4 +34,27 @@ function addTranslateButtons() {
   });
 }
 
+function translateMessage(messageText, messageElement) {
+  chrome.storage.sync.get(["userLanguage", "contactLanguage"], function (data) {
+    const userLanguage = data.userLanguage || "en";
+    const contactLanguage = data.contactLanguage || "en";
+
+    const apiUrl = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(
+      messageText
+    )}&langpair=${userLanguage}|${contactLanguage}`;
+
+    fetch(apiUrl)
+      .then((response) => response.json())
+      .then((data) => {
+        const translatedText = data.responseData.translatedText;
+
+        const translationElement = document.createElement("div");
+        translationElement.className = "translated-text";
+        translationElement.innerText = translatedText;
+        messageElement.appendChild(translationElement);
+      })
+      .catch((error) => console.error("Translation API error:", error));
+  });
+}
+
 setInterval(addTranslateButtons, 2000);
